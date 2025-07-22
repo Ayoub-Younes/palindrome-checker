@@ -17,7 +17,12 @@ if(!inputText.value){
 }
 return result.textContent;
 }
-checkButton.addEventListener("click", palindromeChecker) 
+checkButton.addEventListener("click", palindromeChecker)
+inputText.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    palindromeChecker();
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const img = document.getElementById('background-img');
