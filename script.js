@@ -18,3 +18,32 @@ if(!inputText.value){
 return result.textContent;
 }
 checkButton.addEventListener("click", palindromeChecker) 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('background-img');
+    const mainContent = document.body;
+
+    let imageLoaded = false;
+
+    function showContent() {
+      mainContent.style.display = 'flex';
+    }
+
+    if (img.complete) {
+      imageLoaded = true;
+      showContent();
+    } else {
+
+      img.onload = function() {
+        imageLoaded = true;
+        showContent();
+      };
+    }
+
+    // Fallback in case the image takes too long or fails to load
+    setTimeout(function() {
+      if (!imageLoaded) {
+        showContent();
+      }
+    }, 3000);
+  });
