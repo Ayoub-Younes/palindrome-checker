@@ -1,0 +1,142 @@
+*{
+  box-sizing:border-box;
+}
+
+
+html {
+height: 100%;
+overflow: hidden;
+}
+
+
+body {
+  font-size: 1em;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url('imgs/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  max-width: 700px;
+  margin: auto;
+  width: 90%;
+  padding: 2em;
+}
+
+
+.container h2 {
+  margin: 0.5em auto;
+}
+
+
+.input-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1em;
+}
+
+#text-input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 2px solid #8e7cc3;
+  outline: none;
+  font-size: 1em;
+  width: 70%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#text-input:focus {
+  border-color: #ea53c2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#check-btn {
+
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #8e7cc3;
+  background: linear-gradient(135deg, #8e7cc3, #ea53c2);
+  opacity: 0.8;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#check-btn:hover {
+  opacity: 1;
+}
+
+#result{
+  width: 100%;
+  max-height: 60px;
+  overflow: auto;
+  margin: 25px auto;
+  word-wrap: break-word;
+}
+
+.palindrome-definition {
+  width: 90%;
+  border-radius: 10px;
+  background-color:  #cbdff9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 10px auto;
+}
+
+.palindrome-definition p {
+  font-family: 'Libre Baskerville';
+  margin: 1.5em;
+  color:#464545;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+
+
+  .palindrome-definition p {
+    font-size: 0.9em;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .input-container {
+    margin-top: 0.5em;
+    width: 90%;
+    gap: 0.5em;
+  }
+
+  .palindrome-definition p {
+    font-size: 0.8em;
+  }
+  
+  #check-btn {
+    padding: 10px;
+  }
+
+}
